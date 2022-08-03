@@ -1,14 +1,6 @@
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
 import { vars } from "./theme.css"
 
-const space = {
-  none: 0,
-  small: "4px",
-  medium: "8px",
-  large: "16px",
-  // etc.
-}
-
 const responsiveProperties = defineProperties({
   conditions: {
     mobile: {},
@@ -28,10 +20,10 @@ const responsiveProperties = defineProperties({
       "space-between",
     ],
     alignItems: ["stretch", "flex-start", "center", "flex-end"],
-    paddingTop: space,
-    paddingBottom: space,
-    paddingLeft: space,
-    paddingRight: space,
+    paddingTop: vars.spacing,
+    paddingBottom: vars.spacing,
+    paddingLeft: vars.spacing,
+    paddingRight: vars.spacing,
     // etc.
   },
   shorthands: {

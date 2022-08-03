@@ -1,6 +1,12 @@
 import { createGlobalTheme } from '@vanilla-extract/css'
 
+const px = (value: string | number) => `${value}px`
+
+const UNIT = 4
+
 const BASE_COLORS = {
+  white: "#ffffff",
+  black: "#000000",
   cerulean: {
     cerulean1: "#DBF7FF",
     cerulean2: "#ACE0EF",
@@ -61,7 +67,19 @@ export const vars = createGlobalTheme(":root", {
       tertiary: BASE_COLORS.plantain.plantain5,
       optional1: BASE_COLORS.ocean.ocean5,
       optional2: BASE_COLORS.papaya.papaya5,
+      white: BASE_COLORS.white,
+      black: BASE_COLORS.black,
     },
     ...BASE_COLORS,
+  },
+  spacing: {
+    none: "0",
+    xs: px(1 * UNIT),
+    s: px(2 * UNIT),
+    m: px(4 * UNIT),
+    l: px(6 * UNIT),
+    xl: px(8 * UNIT),
+    xxl: px(10 * UNIT),
+    xxxl: px(12 * UNIT),
   },
 })

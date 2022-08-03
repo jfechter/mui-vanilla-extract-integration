@@ -13,5 +13,6 @@ export const mainContainer = style({
 
 export const sstyle = sprinkles({
   background: 'tertiary',
-  color: 'secondary'
+  color: 'secondary',
+  padding: 'l'
 })
