@@ -1,34 +1,194 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# List of variables from MUI
 
-## Getting Started
+## :root, [data-mui-color-scheme="light"]
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```
+--mui-palette-common-black: #000;
+--mui-palette-common-white: #fff;
+--mui-palette-common-background: #fff;
+--mui-palette-common-onBackground: #000;
+--mui-palette-common-backgroundChannel: 255 255 255;
+--mui-palette-common-onBackgroundChannel: 0 0 0;
+--mui-palette-primary-main: #1976d2;
+--mui-palette-primary-light: #42a5f5;
+--mui-palette-primary-dark: #1565c0;
+--mui-palette-primary-contrastText: #fff;
+--mui-palette-primary-mainChannel: 25 118 210;
+--mui-palette-primary-lightChannel: 66 165 245;
+--mui-palette-primary-darkChannel: 21 101 192;
+--mui-palette-primary-contrastTextChannel: 255 255 255;
+--mui-palette-secondary-main: #9c27b0;
+--mui-palette-secondary-light: #ba68c8;
+--mui-palette-secondary-dark: #7b1fa2;
+--mui-palette-secondary-contrastText: #fff;
+--mui-palette-secondary-mainChannel: 156 39 176;
+--mui-palette-secondary-lightChannel: 186 104 200;
+--mui-palette-secondary-darkChannel: 123 31 162;
+--mui-palette-secondary-contrastTextChannel: 255 255 255;
+--mui-palette-error-main: #d32f2f;
+--mui-palette-error-light: #ef5350;
+--mui-palette-error-dark: #c62828;
+--mui-palette-error-contrastText: #fff;
+--mui-palette-error-mainChannel: 211 47 47;
+--mui-palette-error-lightChannel: 239 83 80;
+--mui-palette-error-darkChannel: 198 40 40;
+--mui-palette-error-contrastTextChannel: 255 255 255;
+--mui-palette-warning-main: #ed6c02;
+--mui-palette-warning-light: #ff9800;
+--mui-palette-warning-dark: #e65100;
+--mui-palette-warning-contrastText: #fff;
+--mui-palette-warning-mainChannel: 237 108 2;
+--mui-palette-warning-lightChannel: 255 152 0;
+--mui-palette-warning-darkChannel: 230 81 0;
+--mui-palette-warning-contrastTextChannel: 255 255 255;
+--mui-palette-info-main: #0288d1;
+--mui-palette-info-light: #03a9f4;
+--mui-palette-info-dark: #01579b;
+--mui-palette-info-contrastText: #fff;
+--mui-palette-info-mainChannel: 2 136 209;
+--mui-palette-info-lightChannel: 3 169 244;
+--mui-palette-info-darkChannel: 1 87 155;
+--mui-palette-info-contrastTextChannel: 255 255 255;
+--mui-palette-success-main: #2e7d32;
+--mui-palette-success-light: #4caf50;
+--mui-palette-success-dark: #1b5e20;
+--mui-palette-success-contrastText: #fff;
+--mui-palette-success-mainChannel: 46 125 50;
+--mui-palette-success-lightChannel: 76 175 80;
+--mui-palette-success-darkChannel: 27 94 32;
+--mui-palette-success-contrastTextChannel: 255 255 255;
+--mui-palette-grey-50: #fafafa;
+--mui-palette-grey-100: #f5f5f5;
+--mui-palette-grey-200: #eeeeee;
+--mui-palette-grey-300: #e0e0e0;
+--mui-palette-grey-400: #bdbdbd;
+--mui-palette-grey-500: #9e9e9e;
+--mui-palette-grey-600: #757575;
+--mui-palette-grey-700: #616161;
+--mui-palette-grey-800: #424242;
+--mui-palette-grey-900: #212121;
+--mui-palette-grey-A100: #f5f5f5;
+--mui-palette-grey-A200: #eeeeee;
+--mui-palette-grey-A400: #bdbdbd;
+--mui-palette-grey-A700: #616161;
+--mui-palette-text-primary: rgba(0, 0, 0, 0.87);
+--mui-palette-text-secondary: rgba(0, 0, 0, 0.6);
+--mui-palette-text-disabled: rgba(0, 0, 0, 0.38);
+--mui-palette-text-primaryChannel: 0 0 0;
+--mui-palette-text-secondaryChannel: 0 0 0;
+--mui-palette-divider: rgba(0, 0, 0, 0.12);
+--mui-palette-background-paper: #fff;
+--mui-palette-background-default: #fff;
+--mui-palette-action-active: rgba(0, 0, 0, 0.54);
+--mui-palette-action-hover: rgba(0, 0, 0, 0.04);
+--mui-palette-action-hoverOpacity: 0.04;
+--mui-palette-action-selected: rgba(0, 0, 0, 0.08);
+--mui-palette-action-selectedOpacity: 0.08;
+--mui-palette-action-disabled: rgba(0, 0, 0, 0.26);
+--mui-palette-action-disabledBackground: rgba(0, 0, 0, 0.12);
+--mui-palette-action-disabledOpacity: 0.38;
+--mui-palette-action-focus: rgba(0, 0, 0, 0.12);
+--mui-palette-action-focusOpacity: 0.12;
+--mui-palette-action-activatedOpacity: 0.12;
+--mui-palette-action-activeChannel: 0 0 0;
+--mui-palette-action-selectedChannel: 0 0 0;
+--mui-palette-Alert-errorColor: rgb(95, 33, 32);
+--mui-palette-Alert-infoColor: rgb(1, 67, 97);
+--mui-palette-Alert-successColor: rgb(30, 70, 32);
+--mui-palette-Alert-warningColor: rgb(102, 60, 0);
+--mui-palette-Alert-errorFilledBg: var(--mui-palette-error-main);
+--mui-palette-Alert-infoFilledBg: var(--mui-palette-info-main);
+--mui-palette-Alert-successFilledBg: var(--mui-palette-success-main);
+--mui-palette-Alert-warningFilledBg: var(--mui-palette-warning-main);
+--mui-palette-Alert-errorFilledColor: #fff;
+--mui-palette-Alert-infoFilledColor: #fff;
+--mui-palette-Alert-successFilledColor: #fff;
+--mui-palette-Alert-warningFilledColor: #fff;
+--mui-palette-Alert-errorStandardBg: rgb(253, 237, 237);
+--mui-palette-Alert-infoStandardBg: rgb(229, 246, 253);
+--mui-palette-Alert-successStandardBg: rgb(237, 247, 237);
+--mui-palette-Alert-warningStandardBg: rgb(255, 244, 229);
+--mui-palette-Alert-errorIconColor: var(--mui-palette-error-light);
+--mui-palette-Alert-infoIconColor: var(--mui-palette-info-light);
+--mui-palette-Alert-successIconColor: var(--mui-palette-success-light);
+--mui-palette-Alert-warningIconColor: var(--mui-palette-warning-light);
+--mui-palette-AppBar-defaultBg: var(--mui-palette-grey-100);
+--mui-palette-Avatar-defaultBg: var(--mui-palette-grey-400);
+--mui-palette-Chip-defaultBorder: var(--mui-palette-grey-400);
+--mui-palette-Chip-defaultAvatarColor: var(--mui-palette-grey-700);
+--mui-palette-Chip-defaultIconColor: var(--mui-palette-grey-700);
+--mui-palette-FilledInput-bg: rgba(0, 0, 0, 0.06);
+--mui-palette-FilledInput-hoverBg: rgba(0, 0, 0, 0.09);
+--mui-palette-FilledInput-disabledBg: rgba(0, 0, 0, 0.12);
+--mui-palette-LinearProgress-primaryBg: rgb(167, 202, 237);
+--mui-palette-LinearProgress-secondaryBg: rgb(217, 172, 224);
+--mui-palette-LinearProgress-errorBg: rgb(238, 175, 175);
+--mui-palette-LinearProgress-infoBg: rgb(158, 209, 237);
+--mui-palette-LinearProgress-successBg: rgb(175, 205, 177);
+--mui-palette-LinearProgress-warningBg: rgb(248, 199, 158);
+--mui-palette-Skeleton-bg: rgba(var(--mui-palette-text-primaryChannel) / 0.11);
+--mui-palette-Slider-primaryTrack: rgb(167, 202, 237);
+--mui-palette-Slider-secondaryTrack: rgb(217, 172, 224);
+--mui-palette-Slider-errorTrack: rgb(238, 175, 175);
+--mui-palette-Slider-infoTrack: rgb(158, 209, 237);
+--mui-palette-Slider-successTrack: rgb(175, 205, 177);
+--mui-palette-Slider-warningTrack: rgb(248, 199, 158);
+--mui-palette-SnackbarContent-bg: rgb(50, 50, 50);
+--mui-palette-SnackbarContent-color: #fff;
+--mui-palette-SpeedDialAction-fabHoverBg: rgb(216, 216, 216);
+--mui-palette-StepConnector-border: var(--mui-palette-grey-400);
+--mui-palette-StepContent-border: var(--mui-palette-grey-400);
+--mui-palette-Switch-defaultColor: var(--mui-palette-common-white);
+--mui-palette-Switch-defaultDisabledColor: var(--mui-palette-grey-100);
+--mui-palette-Switch-primaryDisabledColor: rgb(167, 202, 237);
+--mui-palette-Switch-secondaryDisabledColor: rgb(217, 172, 224);
+--mui-palette-Switch-errorDisabledColor: rgb(238, 175, 175);
+--mui-palette-Switch-infoDisabledColor: rgb(158, 209, 237);
+--mui-palette-Switch-successDisabledColor: rgb(175, 205, 177);
+--mui-palette-Switch-warningDisabledColor: rgb(248, 199, 158);
+--mui-palette-TableCell-border: rgba(224, 224, 224, 1);
+--mui-palette-Tooltip-bg: rgba(97, 97, 97, 0.92);
+--mui-palette-dividerChannel: 0 0 0;
+--mui-opacity-inputPlaceholder: 0.42;
+--mui-opacity-inputUnderline: 0.42;
+--mui-opacity-switchTrackDisabled: 0.12;
+--mui-opacity-switchTrack: 0.38;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## :root
+```
+--mui-shape-borderRadius: 4px;
+--mui-shadows-0: none;
+--mui-shadows-1: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+--mui-shadows-2: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+--mui-shadows-3: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+--mui-shadows-4: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+--mui-shadows-5: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+--mui-shadows-6: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+--mui-shadows-7: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+--mui-shadows-8: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+--mui-shadows-9: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+--mui-shadows-10: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+--mui-shadows-11: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+--mui-shadows-12: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+--mui-shadows-13: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+--mui-shadows-14: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+--mui-shadows-15: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+--mui-shadows-16: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+--mui-shadows-17: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+--mui-shadows-18: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+--mui-shadows-19: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+--mui-shadows-20: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+--mui-shadows-21: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+--mui-shadows-22: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+--mui-shadows-23: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+--mui-shadows-24: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+--mui-zIndex-mobileStepper: 1000;
+--mui-zIndex-fab: 1050;
+--mui-zIndex-speedDial: 1050;
+--mui-zIndex-appBar: 1100;
+--mui-zIndex-drawer: 1200;
+--mui-zIndex-modal: 1300;
+--mui-zIndex-snackbar: 1400;
+--mui-zIndex-tooltip: 1500;
+```

@@ -42,6 +42,20 @@ const responsiveProperties = defineProperties({
   },
 })
 
+// const sprinklesColors = Object.keys(vars.colors).reduce((acc, color) => {
+//   const val = vars.colors[color]
+//   return {
+//     ...acc,
+//     ...
+//   }
+// }, {})
+
+const sprinklesColors = {
+  ...vars.colors.context,
+  ...vars.colors.cerulean,
+  ...vars.colors.ocean,
+}
+
 const colorProperties = defineProperties({
   conditions: {
     lightMode: {},
@@ -49,8 +63,8 @@ const colorProperties = defineProperties({
   },
   defaultCondition: "lightMode",
   properties: {
-    color: vars.colors,
-    background: vars.colors,
+    color: sprinklesColors,
+    background: sprinklesColors,
     // etc.
   },
 })

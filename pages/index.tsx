@@ -33,6 +33,10 @@ const Home: NextPage = () => {
             My button
           </Button>
         </CssVarsProvider>
+
+        <div className={styles.sstyle}>
+          This is somethign else
+        </div>
       </div>
     </div>
   )
