@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 import Head from "next/head"
+import * as fontStyles from "../styles/fonts.css"
 
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
@@ -34,9 +35,8 @@ const Home: NextPage = () => {
           </Button>
         </CssVarsProvider>
 
-        <div className={styles.sstyle}>
-          This is somethign else
-        </div>
+        <div className={styles.sstyle}>This is somethign else</div>
+        <h1 className={fontStyles.h1Dm}>Care is on its way</h1>
       </div>
     </div>
   )

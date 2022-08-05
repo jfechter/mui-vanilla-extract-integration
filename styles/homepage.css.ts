@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css";
-import { sprinkles } from "./sprinkles.css";
-import { vars } from './theme.css'
+import { style } from "@vanilla-extract/css"
+import { sprinkles } from "./sprinkles.css"
+import { vars } from "./theme.css"
 
 export const mainContainer = style({
   padding: "20px",
@@ -12,7 +12,11 @@ export const mainContainer = style({
 })
 
 export const sstyle = sprinkles({
-  background: 'tertiary',
-  color: 'secondary',
-  padding: 'l'
+  background: "tertiary",
+  fontFamily: "dm",
+  color: "secondary",
+  fontSize: "body2",
+  padding: {
+    xs: 2,
+  },
 })

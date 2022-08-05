@@ -1,4 +1,4 @@
-import { createGlobalTheme } from '@vanilla-extract/css'
+import { createGlobalTheme } from "@vanilla-extract/css"
 
 const px = (value: string | number) => `${value}px`
 
@@ -73,13 +73,52 @@ export const vars = createGlobalTheme(":root", {
     ...BASE_COLORS,
   },
   spacing: {
-    none: "0",
-    xs: px(1 * UNIT),
-    s: px(2 * UNIT),
-    m: px(4 * UNIT),
-    l: px(6 * UNIT),
-    xl: px(8 * UNIT),
-    xxl: px(10 * UNIT),
-    xxxl: px(12 * UNIT),
+    0: "0",
+    1: px(1 * UNIT),
+    2: px(2 * UNIT),
+    3: px(4 * UNIT),
+    4: px(6 * UNIT),
+    5: px(8 * UNIT),
+    6: px(10 * UNIT),
+    7: px(12 * UNIT),
+  },
+  font: {
+    dm: "DM Sans",
+    copernicus: "GalaxieCopernicus",
+  },
+  fontSize: {
+    legal: "12px",
+    body2: "14px",
+    body1: "16px",
+    subheading2: "20px",
+    subheading1: "28px",
+    h3: "32px",
+    h2: "40px",
+    h1: "56px",
+  },
+  fontWeight: {
+    "400": "400",
+    "500": "500"
+  },
+  lineHeight: {
+    "1.1": "1.1",
+    "1.2": "1.2",
+    "1.3": "1.3",
+    "1.4": "1.4",
+    "1.5": "1.5",
+  },
+  letterSpacing: {
+    "-2%": "-0.02em",
+    "-1%": "-0.01em",
+    "-0.5%": "-0.005em",
+    "0%": "0em",
+    "1%": "0.01em"
   },
 })
+
+export const breakpoints = {
+  xs: "0",
+  sm: "screen and (min-width: 764px)",
+  md: "screen and (min-width: 1024px)",
+  lg: "screen and (min-width: 1440px)",
+}

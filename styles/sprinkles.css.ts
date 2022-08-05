@@ -1,46 +1,65 @@
+import { calc } from '@vanilla-extract/css-utils'
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
-import { vars } from "./theme.css"
+import { breakpoints, vars } from "./theme.css"
+import mapValues from "lodash/mapValues"
+
+const negativeSpace = {
+  ["-xsmall"]: `${calc(vars.spacing[0]).negate()}`,
+  ["-small"]: `${calc(vars.spacing[1]).negate()}`,
+  ["-medium"]: `${calc(vars.spacing[2]).negate()}`,
+  ["-large"]: `${calc(vars.spacing[3]).negate()}`,
+  ["-xlarge"]: `${calc(vars.spacing[4]).negate()}`,
+  ["-xxlarge"]: `${calc(vars.spacing[5]).negate()}`,
+  ["-xxxlarge"]: `${calc(vars.spacing[6]).negate()}`,
+}
+
+const margins = {
+  ...vars.spacing,
+  ...negativeSpace,
+}
 
 const responsiveProperties = defineProperties({
-  conditions: {
-    mobile: {},
-    tablet: { "@media": "screen and (min-width: 768px)" },
-    desktop: { "@media": "screen and (min-width: 1024px)" },
-  },
-  defaultCondition: "mobile",
+  conditions: mapValues(breakpoints, (bp) =>
+  bp === "0" ? {} : { "@media": bp }
+),
+  defaultCondition: "xs",
   properties: {
-    display: ["none", "flex", "block", "inline"],
-    flexDirection: ["row", "column"],
+    position: ["absolute", "relative", "fixed", "sticky"],
+    display: ["none", "block", "inline", "inline-block", "flex", "grid"],
+    alignItems: ["flex-start", "center", "flex-end"],
     justifyContent: [
-      "stretch",
       "flex-start",
       "center",
       "flex-end",
-      "space-around",
       "space-between",
+      "space-around",
     ],
-    alignItems: ["stretch", "flex-start", "center", "flex-end"],
+    flexDirection: ["row", "row-reverse", "column", "column-reverse"],
     paddingTop: vars.spacing,
     paddingBottom: vars.spacing,
     paddingLeft: vars.spacing,
     paddingRight: vars.spacing,
-    // etc.
+    marginTop: margins,
+    marginBottom: margins,
+    marginLeft: margins,
+    marginRight: margins,
+    pointerEvents: ["none", "auto"],
+    overflow: ["hidden", "visible"],
+    opacity: ["0", "0.3", "0.7", "1"],
+    order: [0, 1, 2, 3, 4],
+    textAlign: ["left", "center"],
+    textTransform: ["none", "lowercase", "uppercase", "capitalize"],
+    // maxWidth: vars.contentWidth,
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
     paddingX: ["paddingLeft", "paddingRight"],
     paddingY: ["paddingTop", "paddingBottom"],
-    placeItems: ["justifyContent", "alignItems"],
+    margin: ["marginTop", "marginBottom", "marginLeft", "marginRight"],
+    marginX: ["marginLeft", "marginRight"],
+    marginY: ["marginTop", "marginBottom"],
   },
 })
-
-// const sprinklesColors = Object.keys(vars.colors).reduce((acc, color) => {
-//   const val = vars.colors[color]
-//   return {
-//     ...acc,
-//     ...
-//   }
-// }, {})
 
 const sprinklesColors = {
   ...vars.colors.context,
@@ -57,11 +76,24 @@ const colorProperties = defineProperties({
   properties: {
     color: sprinklesColors,
     background: sprinklesColors,
-    // etc.
   },
 })
 
-export const sprinkles = createSprinkles(responsiveProperties, colorProperties)
+const fontProperties = defineProperties({
+  properties: {
+    fontFamily: vars.font,
+    fontSize: vars.fontSize,
+    fontWeight: vars.fontWeight,
+    lineHeight: vars.lineHeight,
+    letterSpacing: vars.letterSpacing
+  },
+})
+
+export const sprinkles = createSprinkles(
+  responsiveProperties,
+  colorProperties,
+  fontProperties
+)
 
 // It's a good idea to export the Sprinkles type too
 export type Sprinkles = Parameters<typeof sprinkles>[0]

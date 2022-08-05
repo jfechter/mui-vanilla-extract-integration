@@ -579,6 +579,11 @@
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
 
+"@types/lodash@^4.14.182":
+  "integrity" "sha512-/THyiqyQAP9AfARo4pF+aCGcyiQ94tX/Is2I7HofNRqoYLgN1PBoOWu2/zTA5zMxzP5EFutMtWtGAFRKUe961Q=="
+  "resolved" "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.182.tgz"
+  "version" "4.14.182"
+
 "@types/node@*", "@types/node@18.6.3":
   "integrity" "sha512-6qKpDtoaYLM+5+AFChLhHermMQxc3TOEFIDzrZLPRGHPrLEwqFkkT5Kx3ju05g6X7uDPazz3jHbKPX0KzCjntg=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-18.6.3.tgz"
@@ -681,6 +686,11 @@
     "@babel/core" "^7.13.10"
     "@babel/template" "^7.12.13"
     "@vanilla-extract/integration" "^5.0.0"
+
+"@vanilla-extract/css-utils@^0.1.2":
+  "integrity" "sha512-qoxIu5E/UhJtoKsPL1JaU9nhTN0Xl5zYV0pScOgsvc3JN46TvTTt0L3GV8x3PQpZP7x3elw8BsC9czYbhJy9Gg=="
+  "resolved" "https://registry.npmjs.org/@vanilla-extract/css-utils/-/css-utils-0.1.2.tgz"
+  "version" "0.1.2"
 
 "@vanilla-extract/css@^1.0.0", "@vanilla-extract/css@^1.7.2":
   "integrity" "sha512-wRsV9sSD4qN6+dbS1ywExw5kEU4Fk/UipNKFsGwwUsHLyuPKK8BaZUmzfyAQex6POHYQboYv6Ajbqpvhx2KhfQ=="
