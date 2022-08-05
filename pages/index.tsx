@@ -1,6 +1,5 @@
 import type { NextPage } from "next"
 import Head from "next/head"
-import * as fontStyles from "../styles/fonts.css"
 
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
@@ -11,6 +10,7 @@ import {
 import Button from "@mui/material/Button"
 
 import * as styles from "../styles/homepage.css"
+import { Div } from "../components/Div"
 
 const theme = extendTheme({})
 
@@ -36,7 +36,8 @@ const Home: NextPage = () => {
         </CssVarsProvider>
 
         <div className={styles.sstyle}>This is somethign else</div>
-        <h1 className={fontStyles.h1Dm}>Care is on its way</h1>
+
+        <Div background="cerulean5" color="white" paddingY={4}>test</Div>
       </div>
     </div>
   )

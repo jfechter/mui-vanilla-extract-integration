@@ -83,8 +83,8 @@ export const vars = createGlobalTheme(":root", {
     7: px(12 * UNIT),
   },
   font: {
-    dm: "DM Sans",
-    copernicus: "GalaxieCopernicus",
+    body: "DM Sans",
+    heading: "GalaxieCopernicus",
   },
   fontSize: {
     legal: "12px",

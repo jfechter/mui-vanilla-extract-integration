@@ -79,6 +79,24 @@ const colorProperties = defineProperties({
   },
 })
 
+const unresponsiveProperties = defineProperties({
+  properties: {
+    flexWrap: ["wrap", "nowrap"],
+    top: [0],
+    bottom: [0],
+    left: [0],
+    right: [0],
+    flexShrink: [0],
+    flexGrow: [0, 1],
+    zIndex: [-1, 0, 1, 2, 3, 4],
+    width: { full: "100%" },
+    userSelect: ["none"],
+    cursor: ["pointer"],
+    aspectRatio: ["1"],
+    transition: ["all 0.3s", "all 0.6s", "all 1s", "all 1.5s"],
+  },
+})
+
 const fontProperties = defineProperties({
   properties: {
     fontFamily: vars.font,
@@ -91,6 +109,7 @@ const fontProperties = defineProperties({
 
 export const sprinkles = createSprinkles(
   responsiveProperties,
+  unresponsiveProperties,
   colorProperties,
   fontProperties
 )

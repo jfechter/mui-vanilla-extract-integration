@@ -13,7 +13,7 @@ export const mainContainer = style({
 
 export const sstyle = sprinkles({
   background: "tertiary",
-  fontFamily: "dm",
+  fontFamily: "heading",
   color: "secondary",
   fontSize: "body2",
   padding: {
