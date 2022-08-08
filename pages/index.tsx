@@ -16,24 +16,22 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.mainContainer}>
-        <Button variant="contained">My button</Button>
+      <Button variant="contained">My button</Button>
 
-        <Box
-          sx={{
-            display: (theme) => {
-              console.log(theme)
-              return "block"
-            },
-          }}
-        ></Box>
+      <Box
+        sx={{
+          display: (theme) => {
+            console.log(theme)
+            return "block"
+          },
+        }}
+      ></Box>
 
-        <div className={styles.sstyle}>This is somethign else</div>
+      <div className={styles.sstyle}>This is somethign else</div>
 
-        <Div background="cerulean5" color="white" paddingY={4}>
-          test
-        </Div>
-      </div>
+      <Div background="cerulean5" color="white" paddingY={4}>
+        test
+      </Div>
     </div>
   )
 }

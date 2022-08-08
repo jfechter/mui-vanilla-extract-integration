@@ -4,7 +4,7 @@ import { IUIComponent } from "../../types"
 import * as styles from "./styles.css"
 
 interface IProps extends IUIComponent {
-  font: keyof typeof vars.font
+  font?: keyof typeof vars.font
   variant: keyof typeof vars.fontSize
   children: any
 }
@@ -15,12 +15,12 @@ const variantToTag = {
   h3: "h3",
   subheading1: "p",
   subheading2: "p",
-  body1: "small",
-  body2: "small",
-  legal: "small",
+  body1: "p",
+  body2: "p",
+  legal: "p",
 }
 
-export function Text({ font, variant, children, ...rest }: IProps) {
+export function Text({ font = 'body', variant, children, ...rest }: IProps) {
   return (
     <Div
       component={variantToTag[variant]}

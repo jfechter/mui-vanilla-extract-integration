@@ -33,6 +33,7 @@ export const Div = ({
   marginBottom,
   marginLeft,
   marginRight,
+  maxWidth,
   display,
   overflow,
   alignItems,
@@ -67,6 +68,7 @@ export const Div = ({
   fontWeight,
   fontFamily,
   lineHeight,
+  whiteSpace,
   innerRef,
   ...restProps
 }: BoxProps) => {
@@ -86,6 +88,7 @@ export const Div = ({
     marginBottom,
     marginLeft,
     marginRight,
+    maxWidth,
     display,
     overflow,
     alignItems,
@@ -112,6 +115,7 @@ export const Div = ({
     fontWeight,
     fontFamily,
     lineHeight,
+    whiteSpace,
     textTransform,
     transition,
     userSelect,

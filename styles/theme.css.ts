@@ -83,6 +83,9 @@ export const vars = createGlobalTheme(":root", {
     6: px(10 * UNIT),
     7: px(12 * UNIT),
   },
+  borderRadius: {
+    large: "16px",
+  },
   font: {
     body: "DM Sans",
     heading: "GalaxieCopernicus",
@@ -99,7 +102,7 @@ export const vars = createGlobalTheme(":root", {
   },
   fontWeight: {
     "400": "400",
-    "500": "500"
+    "500": "500",
   },
   lineHeight: {
     "1.1": "1.1",
@@ -113,8 +116,14 @@ export const vars = createGlobalTheme(":root", {
     "-1%": "-0.01em",
     "-0.5%": "-0.005em",
     "0%": "0em",
-    "1%": "0.01em"
+    "1%": "0.01em",
   },
+  contentWidth: {
+    sm: "440px",
+    md: "592px",
+    lg: "764px",
+    xl: "1024px",
+  }
 })
 
 export const rawBreakpoints = {
@@ -124,6 +133,11 @@ export const rawBreakpoints = {
   lg: 1440,
 }
 
-export const breakpoints = mapValues(rawBreakpoints, (bp) =>
+export const fromBreakpoint = mapValues(rawBreakpoints, (bp) =>
   bp === 0 ? "0" : `screen and (min-width: ${bp}px)`
+)
+
+// This is not mobile first, only use sparingly
+export const untilBreakpoint = mapValues(rawBreakpoints, (bp) =>
+  bp === 0 ? "0" : `screen and (max-width: ${bp - 1}px)`
 )

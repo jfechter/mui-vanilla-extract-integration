@@ -1,6 +1,6 @@
 import { calc } from '@vanilla-extract/css-utils'
 import { defineProperties, createSprinkles } from "@vanilla-extract/sprinkles"
-import { breakpoints, vars } from "./theme.css"
+import { fromBreakpoint, vars } from "./theme.css"
 import mapValues from "lodash/mapValues"
 
 const negativeSpace = {
@@ -19,7 +19,7 @@ const margins = {
 }
 
 const responsiveProperties = defineProperties({
-  conditions: mapValues(breakpoints, (bp) =>
+  conditions: mapValues(fromBreakpoint, (bp) =>
   bp === "0" ? {} : { "@media": bp }
 ),
   defaultCondition: "xs",
@@ -49,7 +49,7 @@ const responsiveProperties = defineProperties({
     order: [0, 1, 2, 3, 4],
     textAlign: ["left", "center"],
     textTransform: ["none", "lowercase", "uppercase", "capitalize"],
-    // maxWidth: vars.contentWidth,
+    maxWidth: vars.contentWidth,
   },
   shorthands: {
     padding: ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"],
@@ -65,6 +65,8 @@ const sprinklesColors = {
   ...vars.colors.context,
   ...vars.colors.cerulean,
   ...vars.colors.ocean,
+  ...vars.colors.papaya,
+  ...vars.colors.cream,
 }
 
 const colorProperties = defineProperties({
@@ -94,6 +96,7 @@ const unresponsiveProperties = defineProperties({
     cursor: ["pointer"],
     aspectRatio: ["1"],
     transition: ["all 0.3s", "all 0.6s", "all 1s", "all 1.5s"],
+    whiteSpace: ["normal", "nowrap"]
   },
 })
 

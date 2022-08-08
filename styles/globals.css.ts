@@ -1,4 +1,4 @@
-import { globalStyle, globalFontFace } from "@vanilla-extract/css"
+import { style, globalStyle, globalFontFace } from "@vanilla-extract/css"
 import { vars } from "./theme.css";
 
 globalFontFace("DM Sans", {
@@ -28,5 +28,17 @@ globalStyle('a', {
 })
 
 globalStyle('*', {
+  margin: 0,
+  padding: 0,
   boxSizing: 'border-box'
+})
+
+export const muiVarsOverwrite = style({
+  vars: {
+    "--mui-palette-primary-main": vars.colors.cerulean.cerulean5,
+    "--mui-palette-primary-light": vars.colors.cerulean.cerulean3,
+    "--mui-palette-primary-dark": vars.colors.cerulean.cerulean7,
+
+    "--mui-shape-borderRadius": vars.borderRadius.large
+  },
 })

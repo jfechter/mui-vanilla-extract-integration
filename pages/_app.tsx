@@ -1,10 +1,10 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app"
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendTheme,
 } from "@mui/material/styles"
-import { rawBreakpoints } from '../styles/theme.css'
+import { rawBreakpoints, vars } from "../styles/theme.css"
+import { muiVarsOverwrite } from "../styles/globals.css"
 
 const theme = extendTheme({
   breakpoints: {
@@ -15,14 +15,20 @@ const theme = extendTheme({
     },
   },
   typography: {
-    fontFamily: "DM Sans",
+    fontFamily: vars.font.body,
+    fontSize: 16,
   },
+  shape: {
+    borderRadius: 16
+  }
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <CssVarsProvider theme={theme}>
-      <Component {...pageProps} />
+      <div className={muiVarsOverwrite}>
+        <Component {...pageProps} />
+      </div>
     </CssVarsProvider>
   )
 }
