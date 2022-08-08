@@ -33,3 +33,8 @@ export const cardMedia = style({
     },
   },
 })
+
+export const button = style({
+  minWidth: "212px",
+  height: "56px"
+})

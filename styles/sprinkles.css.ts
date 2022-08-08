@@ -20,8 +20,8 @@ const margins = {
 
 const responsiveProperties = defineProperties({
   conditions: mapValues(fromBreakpoint, (bp) =>
-  bp === "0" ? {} : { "@media": bp }
-),
+    bp === "0" ? {} : { "@media": bp }
+  ),
   defaultCondition: "xs",
   properties: {
     position: ["absolute", "relative", "fixed", "sticky"],
@@ -39,6 +39,7 @@ const responsiveProperties = defineProperties({
     paddingBottom: vars.spacing,
     paddingLeft: vars.spacing,
     paddingRight: vars.spacing,
+    gap: vars.spacing,
     marginTop: margins,
     marginBottom: margins,
     marginLeft: margins,

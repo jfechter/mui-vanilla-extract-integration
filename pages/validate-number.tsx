@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardContent,
   Grid,
@@ -36,7 +37,7 @@ const Home: NextPage = () => {
               layout="fill"
             />
           </Div>
-          <CardContent>
+          <Div paddingX={{ xs: 3, md: 6 }} paddingY={6}>
             <Stack spacing={3}>
               <Text
                 font="heading"
@@ -68,6 +69,7 @@ const Home: NextPage = () => {
                           variant="body2"
                           color="cream5"
                           whiteSpace="nowrap"
+                          pointerEvents="none"
                         >
                           Phone Number
                         </Text>
@@ -83,6 +85,7 @@ const Home: NextPage = () => {
                           variant="body2"
                           color="cream5"
                           whiteSpace="nowrap"
+                          pointerEvents="none"
                         >
                           e.g. 94102
                         </Text>
@@ -98,8 +101,21 @@ const Home: NextPage = () => {
                 Required to complete your profile
               </Text>
             </Stack>
-          </CardContent>
+          </Div>
         </Card>
+        <Div
+          display={{ xs: "none", sm: "flex" }}
+          justifyContent="space-between"
+          paddingY={5}
+          gap={3}
+        >
+          <Button variant="outlined" className={styles.button}>
+            Back
+          </Button>
+          <Button variant="contained" className={styles.button}>
+            Next
+          </Button>
+        </Div>
       </Container>
     </>
   )
