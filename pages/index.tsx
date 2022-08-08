@@ -1,18 +1,11 @@
 import type { NextPage } from "next"
 import Head from "next/head"
 
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  experimental_extendTheme as extendTheme,
-  styled,
-} from "@mui/material/styles"
-
 import Button from "@mui/material/Button"
 
 import * as styles from "../styles/homepage.css"
 import { Div } from "../components/Div"
-
-const theme = extendTheme({})
+import Box from "@mui/material/Box"
 
 const Home: NextPage = () => {
   return (
@@ -24,20 +17,22 @@ const Home: NextPage = () => {
       </Head>
 
       <div className={styles.mainContainer}>
-        <CssVarsProvider theme={theme}>
-          <Button
-            variant="contained"
-            // classes={{
-            //   contained: styles.customButton,
-            // }}
-          >
-            My button
-          </Button>
-        </CssVarsProvider>
+        <Button variant="contained">My button</Button>
+
+        <Box
+          sx={{
+            display: (theme) => {
+              console.log(theme)
+              return "block"
+            },
+          }}
+        ></Box>
 
         <div className={styles.sstyle}>This is somethign else</div>
 
-        <Div background="cerulean5" color="white" paddingY={4}>test</Div>
+        <Div background="cerulean5" color="white" paddingY={4}>
+          test
+        </Div>
       </div>
     </div>
   )

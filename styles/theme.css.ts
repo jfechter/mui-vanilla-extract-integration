@@ -1,4 +1,5 @@
 import { createGlobalTheme } from "@vanilla-extract/css"
+import mapValues from "lodash/mapValues"
 
 const px = (value: string | number) => `${value}px`
 
@@ -116,9 +117,13 @@ export const vars = createGlobalTheme(":root", {
   },
 })
 
-export const breakpoints = {
-  xs: "0",
-  sm: "screen and (min-width: 764px)",
-  md: "screen and (min-width: 1024px)",
-  lg: "screen and (min-width: 1440px)",
+export const rawBreakpoints = {
+  xs: 0,
+  sm: 764,
+  md: 1024,
+  lg: 1440,
 }
+
+export const breakpoints = mapValues(rawBreakpoints, (bp) =>
+  bp === 0 ? "0" : `screen and (min-width: ${bp}px)`
+)
