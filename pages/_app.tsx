@@ -2,6 +2,7 @@ import type { AppProps } from "next/app"
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendTheme,
+  StyledEngineProvider
 } from "@mui/material/styles"
 import { rawBreakpoints, vars } from "../styles/theme.css"
 import { muiVarsOverwrite } from "../styles/globals.css"
@@ -25,11 +26,13 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <CssVarsProvider theme={theme}>
-      <div className={muiVarsOverwrite}>
-        <Component {...pageProps} />
-      </div>
-    </CssVarsProvider>
+    <StyledEngineProvider injectFirst>
+      <CssVarsProvider theme={theme}>
+        <div className={muiVarsOverwrite}>
+          <Component {...pageProps} />
+        </div>
+      </CssVarsProvider>
+    </StyledEngineProvider>
   )
 }
 
