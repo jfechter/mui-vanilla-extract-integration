@@ -58,7 +58,7 @@ const Home: NextPage = () => {
               </Text>
 
               <Grid container justifyContent="center">
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} md={7}>
                   <Stack spacing={2}>
                     <OutlinedInput
                       fullWidth

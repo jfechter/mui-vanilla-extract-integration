@@ -21,6 +21,26 @@ const theme = extendTheme({
   },
   shape: {
     borderRadius: 16
+  },
+  components: {
+    // not sure if we'll end up using <OutlinedInput /> components
+    MuiOutlinedInput: {
+      styleOverrides: {
+        input: {
+          "&::placeholder": {
+            opacity: 1
+          }
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        outlined: {
+          borderColor: vars.colors.cream.cream3,
+          color: vars.colors.black
+        }
+      }
+    }
   }
 })
 
