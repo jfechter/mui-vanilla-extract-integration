@@ -4,8 +4,8 @@ import {
   experimental_extendTheme as extendTheme,
   StyledEngineProvider
 } from "@mui/material/styles"
-import { rawBreakpoints, vars } from "../styles/theme.css"
-import { muiVarsOverwrite } from "../styles/globals.css"
+import { rawBreakpoints, vars } from "@styles/theme.css"
+import { muiVarsOverwrite } from "@styles/globals.css"
 
 const theme = extendTheme({
   breakpoints: {

@@ -19,7 +19,7 @@ globalStyle('html, body', {
   padding: 0,
   margin: 0,
   fontFamily: vars.font.body,
-  backgroundColor: vars.colors.cream.cream1,
+  backgroundColor: vars.colors.cerulean.cerulean5,
 })
 
 globalStyle('a', {

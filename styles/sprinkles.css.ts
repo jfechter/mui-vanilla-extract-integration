@@ -70,18 +70,6 @@ const sprinklesColors = {
   ...vars.colors.cream,
 }
 
-const colorProperties = defineProperties({
-  conditions: {
-    lightMode: {},
-    darkMode: { "@media": "(prefers-color-scheme: dark)" },
-  },
-  defaultCondition: "lightMode",
-  properties: {
-    color: sprinklesColors,
-    background: sprinklesColors,
-  },
-})
-
 const unresponsiveProperties = defineProperties({
   properties: {
     flexWrap: ["wrap", "nowrap"],
@@ -97,7 +85,9 @@ const unresponsiveProperties = defineProperties({
     cursor: ["pointer"],
     aspectRatio: ["1"],
     transition: ["all 0.3s", "all 0.6s", "all 1s", "all 1.5s"],
-    whiteSpace: ["normal", "nowrap"]
+    whiteSpace: ["normal", "nowrap"],
+    color: sprinklesColors,
+    background: sprinklesColors,
   },
 })
 
@@ -114,7 +104,6 @@ const fontProperties = defineProperties({
 export const sprinkles = createSprinkles(
   responsiveProperties,
   unresponsiveProperties,
-  colorProperties,
   fontProperties
 )
 

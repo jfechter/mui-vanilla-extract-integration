@@ -1,4 +1,5 @@
 import { style } from "@vanilla-extract/css"
+import { sprinkles } from "../sprinkles.css"
 import { fromBreakpoint, untilBreakpoint, vars } from "../theme.css"
 
 export const mobileTransparentCard = style({

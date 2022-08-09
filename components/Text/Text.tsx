@@ -1,3 +1,4 @@
+import cn from "classnames"
 import { Div } from "../Div"
 import { vars } from "../../styles/theme.css"
 import { IUIComponent } from "../../types"
@@ -20,14 +21,17 @@ const variantToTag = {
   legal: "p",
 }
 
-export function Text({ font = 'body', variant, children, ...rest }: IProps) {
+export function Text({ font = 'body', variant, children, className, ...rest }: IProps) {
   return (
     <Div
       component={variantToTag[variant]}
-      className={styles.textRecipe({
-        font,
-        variant,
-      })}
+      className={cn(
+        className,
+        styles.textRecipe({
+          font,
+          variant,
+        })
+      )}
       {...rest}
     >
       {children}

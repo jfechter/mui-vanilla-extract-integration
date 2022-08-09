@@ -1,6 +1,6 @@
 import { Divider } from "@mui/material"
 import type { NextPage } from "next"
-import { Text } from "../components/Text"
+import { Text } from "@components/Text"
 
 const Fonts: NextPage = () => {
   return (

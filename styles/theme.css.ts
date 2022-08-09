@@ -84,6 +84,7 @@ export const vars = createGlobalTheme(":root", {
     7: px(12 * UNIT),
   },
   borderRadius: {
+    none: "0px",
     large: "16px",
   },
   font: {

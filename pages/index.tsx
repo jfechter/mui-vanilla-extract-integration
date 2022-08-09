@@ -3,8 +3,8 @@ import Head from "next/head"
 
 import Button from "@mui/material/Button"
 
-import * as styles from "../styles/homepage.css"
-import { Div } from "../components/Div"
+import * as styles from "@styles/homepage.css"
+import { Div } from "@components/Div"
 import Box from "@mui/material/Box"
 
 const Home: NextPage = () => {
