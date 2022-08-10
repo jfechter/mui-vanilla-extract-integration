@@ -1,11 +1,15 @@
-import { Button } from "@mui/material"
+import { Button, ButtonProps } from "@mui/material"
 import cn from "classnames"
 
 import * as styles from "./styles.css"
 
-export function MainCta() {
+interface IProps extends ButtonProps {
+  [key: string]: any
+}
+
+export function MainCta({ ...rest }: IProps) {
   return (
-    <Button variant="contained" className={cn(styles.mainCta)}>
+    <Button variant="contained" className={cn(styles.mainCta)} {...rest}>
       Next
     </Button>
   )
