@@ -5,7 +5,7 @@ import * as styles from "./styles.css"
 
 export function MainCta() {
   return (
-    <Button variant="contained" className={cn(styles.button, styles.mainCta)}>
+    <Button variant="contained" className={cn(styles.mainCta)}>
       Next
     </Button>
   )

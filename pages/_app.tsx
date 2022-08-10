@@ -35,6 +35,11 @@ const theme = extendTheme({
     },
     MuiButton: {
       styleOverrides: {
+        root: {
+          minWidth: "212px",
+          height: "56px",
+          textTransform: "capitalize"
+        },
         outlined: {
           borderColor: vars.colors.cream.cream3,
           color: vars.colors.black

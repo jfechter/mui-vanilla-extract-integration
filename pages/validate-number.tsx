@@ -16,7 +16,9 @@ import { Text } from "@components/Text"
 
 import * as styles from "@styles/pages/validate-number.css"
 import { Header } from "@templates/Header"
-import { MainCta } from "@components/MainCta/MainCta"
+import { MainCta } from "@components/MainCta"
+import { Page } from "@components/Page"
+import { BackButton } from "@components/BackButton/BackButton"
 
 const Home: NextPage = () => {
   return (
@@ -28,7 +30,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Div background="cream1">
+      <Page>
         <Header></Header>
 
         <Container maxWidth="sm" className={styles.noPaddingOnMobile}>
@@ -113,13 +115,11 @@ const Home: NextPage = () => {
             gap={3}
             display="flex"
           >
-            <Button variant="outlined" className={styles.button}>
-              Back
-            </Button>
+            <BackButton />
             <MainCta />
           </Div>
         </Container>
-      </Div>
+      </Page>
     </>
   )
 }

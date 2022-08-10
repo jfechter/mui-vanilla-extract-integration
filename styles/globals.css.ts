@@ -22,6 +22,10 @@ globalStyle('html, body', {
   backgroundColor: vars.colors.cerulean.cerulean5,
 })
 
+globalStyle('h1, h2, h3, h4, h5, h6', {
+  fontWeight: "400"
+})
+
 globalStyle('a', {
   color: 'inherit',
   textDecoration: 'none'
