@@ -75,26 +75,29 @@ const Home: NextPage = () => {
                     }
                   }
                   return (
-                    <Grid2 container spacing={3}>
-                      <Grid2 xs={12} sm={6}>
-                        <Card className={getClassName("now")}>
-                          <CardActionArea onClick={() => onChange("now")}>
-                            <CardContent>
-                              <Text variant="subheading2">Right away</Text>
-                            </CardContent>
-                          </CardActionArea>
-                        </Card>
+                    // Grid2 breaks when is a direct children of <Stack>
+                    <Div>
+                      <Grid2 container spacing={3}>
+                        <Grid2 xs={12} sm={6}>
+                          <Card className={getClassName("now")}>
+                            <CardActionArea onClick={() => onChange("now")}>
+                              <CardContent>
+                                <Text variant="subheading2">Right away</Text>
+                              </CardContent>
+                            </CardActionArea>
+                          </Card>
+                        </Grid2>
+                        <Grid2 xs={12} sm={6}>
+                          <Card className={getClassName("later")}>
+                            <CardActionArea onClick={() => onChange("later")}>
+                              <CardContent>
+                                <Text variant="subheading2">Im flexible</Text>
+                              </CardContent>
+                            </CardActionArea>
+                          </Card>
+                        </Grid2>
                       </Grid2>
-                      <Grid2 xs={12} sm={6}>
-                        <Card className={getClassName("later")}>
-                          <CardActionArea onClick={() => onChange("later")}>
-                            <CardContent>
-                              <Text variant="subheading2">Im flexible</Text>
-                            </CardContent>
-                          </CardActionArea>
-                        </Card>
-                      </Grid2>
-                    </Grid2>
+                    </Div>
                   )
                 }}
               />

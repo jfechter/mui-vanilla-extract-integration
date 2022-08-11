@@ -1,4 +1,11 @@
-import { Button, Card, CardActionArea, CardContent, Stack } from "@mui/material"
+import {
+  Button,
+  Card,
+  CardActionArea,
+  CardContent,
+  Slider,
+  Stack,
+} from "@mui/material"
 import Grid2 from "@mui/material/Unstable_Grid2"
 import { Container } from "@mui/system"
 import type { NextPage } from "next"
@@ -15,6 +22,7 @@ import { CardOption } from "@components/CardOption/CardOption"
 import { useState } from "react"
 
 type FormData = {
+  budget: Array<number>
   gender: string
   language: Array<string>
   driving: Array<string>
@@ -29,10 +37,11 @@ const Home: NextPage = () => {
     formState: { isValid },
   } = useForm<FormData>({
     defaultValues: {
+      budget: [20, 60],
       gender: "",
       language: [],
       driving: [],
-      other: []
+      other: [],
     },
     mode: "onChange",
   })
@@ -51,7 +60,7 @@ const Home: NextPage = () => {
 
       <Page>
         <Header></Header>
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
           <Div
             component="form"
             paddingX={{ md: 6 }}
@@ -59,11 +68,72 @@ const Home: NextPage = () => {
             onSubmit={handleSubmit(submit)}
           >
             <Stack spacing={3}>
+              <Text
+                font="heading"
+                variant="h2"
+                color="black"
+                textAlign="center"
+              >
+                Next, let’s find your ideal caregiver
+              </Text>
+
               <Card>
                 <CardContent>
                   <Grid2 container>
                     <Grid2 xs={12} md={5}>
-                      <Text variant="subheading2" marginBottom={4} marginTop={2}>Gender preference</Text>
+                      <Text
+                        variant="subheading2"
+                        marginBottom={4}
+                        marginTop={2}
+                      >
+                        What's your budget?
+                      </Text>
+                    </Grid2>
+                    <Grid2 xs={12} md={7}>
+                      <Controller
+                        name="budget"
+                        control={control}
+                        render={({ field }) => (
+                          <Div paddingTop={6}>
+                            <Slider
+                              value={field.value}
+                              valueLabelDisplay="on"
+                              valueLabelFormat={(v) => `$${v}/h`}
+                              onChange={(event, newValue) =>
+                                field.onChange(newValue)
+                              }
+                            />
+                            <Text
+                              variant="body2"
+                              background="cerulean1"
+                              color="cerulean8"
+                              textAlign="center"
+                              padding={3}
+                              borderRadius="large"
+                              marginTop={2}
+                            >
+                              This is a typical price range for services in your
+                              area
+                            </Text>
+                          </Div>
+                        )}
+                      />
+                    </Grid2>
+                  </Grid2>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent>
+                  <Grid2 container>
+                    <Grid2 xs={12} md={5}>
+                      <Text
+                        variant="subheading2"
+                        marginBottom={4}
+                        marginTop={2}
+                      >
+                        Gender preference
+                      </Text>
                     </Grid2>
                     <Grid2 xs={12} md={7}>
                       <Controller
@@ -110,7 +180,13 @@ const Home: NextPage = () => {
                 <CardContent>
                   <Grid2 container>
                     <Grid2 xs={12} md={5}>
-                      <Text variant="subheading2" marginBottom={4} marginTop={2}>Languages spoken</Text>
+                      <Text
+                        variant="subheading2"
+                        marginBottom={4}
+                        marginTop={2}
+                      >
+                        Languages spoken
+                      </Text>
                     </Grid2>
                     <Grid2 xs={12} md={7}>
                       <Controller
@@ -204,7 +280,13 @@ const Home: NextPage = () => {
                 <CardContent>
                   <Grid2 container>
                     <Grid2 xs={12} md={5}>
-                      <Text variant="subheading2" marginBottom={4} marginTop={2}>Driving requirements</Text>
+                      <Text
+                        variant="subheading2"
+                        marginBottom={4}
+                        marginTop={2}
+                      >
+                        Driving requirements
+                      </Text>
                     </Grid2>
                     <Grid2 xs={12} md={7}>
                       <Controller
@@ -260,7 +342,13 @@ const Home: NextPage = () => {
                 <CardContent>
                   <Grid2 container>
                     <Grid2 xs={12} md={5}>
-                      <Text variant="subheading2" marginBottom={4} marginTop={2}>Any other needs</Text>
+                      <Text
+                        variant="subheading2"
+                        marginBottom={4}
+                        marginTop={2}
+                      >
+                        Any other needs
+                      </Text>
                     </Grid2>
                     <Grid2 xs={12} md={7}>
                       <Controller

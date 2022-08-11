@@ -43,6 +43,8 @@ export const muiVarsOverwrite = style({
     "--mui-palette-primary-light": vars.colors.cerulean.cerulean3,
     "--mui-palette-primary-dark": vars.colors.cerulean.cerulean7,
 
-    "--mui-shape-borderRadius": vars.borderRadius.large
+    "--mui-shape-borderRadius": vars.borderRadius.large,
+
+    "--mui-palette-action-disabledBackground": vars.colors.cream.cream3
   },
 })

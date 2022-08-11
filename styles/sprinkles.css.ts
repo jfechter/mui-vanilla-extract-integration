@@ -97,11 +97,23 @@ const unresponsiveProperties = defineProperties({
     width: { full: "100%" },
     userSelect: ["none"],
     cursor: ["pointer"],
+    borderTopLeftRadius: vars.borderRadius,
+    borderTopRightRadius: vars.borderRadius,
+    borderBottomRightRadius: vars.borderRadius,
+    borderBottomLeftRadius: vars.borderRadius,
     aspectRatio: ["1"],
     transition: ["all 0.3s", "all 0.6s", "all 1s", "all 1.5s"],
     whiteSpace: ["normal", "nowrap"],
     color: sprinklesColors,
     background: sprinklesColors,
+  },
+  shorthands: {
+    borderRadius: [
+      "borderTopLeftRadius",
+      "borderTopRightRadius",
+      "borderBottomRightRadius",
+      "borderBottomLeftRadius",
+    ],
   },
 })
 
