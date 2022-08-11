@@ -73,6 +73,20 @@ const sprinklesColors = {
 const unresponsiveProperties = defineProperties({
   properties: {
     flexWrap: ["wrap", "nowrap"],
+    gridColumn: [
+      "span 1",
+      "span 2",
+      "span 3",
+      "span 4",
+      "span 5",
+      "span 6",
+      "span 7",
+      "span 8",
+      "span 9",
+      "span 10",
+      "span 11",
+      "span 12",
+    ],
     top: [0],
     bottom: [0],
     left: [0],

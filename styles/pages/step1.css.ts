@@ -7,7 +7,7 @@ export const cardResting = style({
 })
 
 export const cardSelected = style({
-  boxShadow: "var(--mui-shadows-10)",
+  boxShadow: "var(--mui-shadows-6)",
 })
 
 export const cardFaded = sprinkles({

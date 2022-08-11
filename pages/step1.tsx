@@ -3,6 +3,7 @@ import Grid2 from "@mui/material/Unstable_Grid2"
 import { Container } from "@mui/system"
 import type { NextPage } from "next"
 import Head from "next/head"
+import { useForm, Controller } from "react-hook-form"
 import { Div } from "@components/Div"
 import { Text } from "@components/Text"
 
@@ -11,11 +12,24 @@ import { Header } from "@templates/Header"
 import { MainCta } from "@components/MainCta"
 import { Page } from "@components/Page"
 import { BackButton } from "@components/BackButton/BackButton"
-import { useState } from "react"
-import { CardPicker } from "@components/CardPicker"
+import { useRouter } from "next/router"
 
 const Home: NextPage = () => {
-  const [selectedCard, setSelectedCard] = useState('')
+  const router = useRouter()
+  const {
+    handleSubmit,
+    control,
+    formState: { isValid },
+  } = useForm({
+    defaultValues: {
+      careTime: "",
+    },
+    mode: "onChange",
+  })
+  const submit = (data: any) => {
+    console.log(data)
+    router.push("/step2")
+  }
 
   return (
     <>
@@ -28,9 +42,13 @@ const Home: NextPage = () => {
 
       <Page>
         <Header></Header>
-
         <Container maxWidth="sm">
-          <Div paddingX={{ md: 6 }} paddingY={6}>
+          <Div
+            component="form"
+            paddingX={{ md: 6 }}
+            paddingY={6}
+            onSubmit={handleSubmit(submit)}
+          >
             <Stack spacing={3}>
               <Text
                 font="heading"
@@ -41,11 +59,15 @@ const Home: NextPage = () => {
                 First, when do you need care?
               </Text>
 
-              <CardPicker>
-                {({selectedCard, setSelectedCard}) => {
+              <Controller
+                name="careTime"
+                control={control}
+                rules={{ required: true }}
+                render={({ field }) => {
+                  const { onChange, value } = field
                   const getClassName = (card: string) => {
-                    if (selectedCard) {
-                      return selectedCard === card
+                    if (value) {
+                      return value === card
                         ? styles.cardSelected
                         : styles.cardFaded
                     } else {
@@ -55,11 +77,8 @@ const Home: NextPage = () => {
                   return (
                     <Grid2 container spacing={3}>
                       <Grid2 xs={12} sm={6}>
-                        <Card className={getClassName("first")}>
-                          <CardActionArea
-                            value="first"
-                            onClick={() => setSelectedCard("first")}
-                          >
+                        <Card className={getClassName("now")}>
+                          <CardActionArea onClick={() => onChange("now")}>
                             <CardContent>
                               <Text variant="subheading2">Right away</Text>
                             </CardContent>
@@ -67,11 +86,8 @@ const Home: NextPage = () => {
                         </Card>
                       </Grid2>
                       <Grid2 xs={12} sm={6}>
-                        <Card className={getClassName("second")}>
-                          <CardActionArea
-                            value="second"
-                            onClick={() => setSelectedCard("second")}
-                          >
+                        <Card className={getClassName("later")}>
+                          <CardActionArea onClick={() => onChange("later")}>
                             <CardContent>
                               <Text variant="subheading2">Im flexible</Text>
                             </CardContent>
@@ -81,7 +97,7 @@ const Home: NextPage = () => {
                     </Grid2>
                   )
                 }}
-              </CardPicker>
+              />
             </Stack>
             <Div
               justifyContent="space-between"
@@ -89,8 +105,8 @@ const Home: NextPage = () => {
               gap={3}
               display="flex"
             >
-              <BackButton />
-              <MainCta disabled={!selectedCard} />
+              <BackButton href="/validate-number" />
+              <MainCta type="submit" disabled={!isValid} />
             </Div>
           </Div>
         </Container>

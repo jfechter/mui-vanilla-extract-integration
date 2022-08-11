@@ -6,6 +6,8 @@ import Button from "@mui/material/Button"
 import * as styles from "@styles/homepage.css"
 import { Div } from "@components/Div"
 import Box from "@mui/material/Box"
+import { Page } from "@components/Page"
+import Link from "next/link"
 
 const Home: NextPage = () => {
   return (
@@ -16,22 +18,19 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Button variant="contained">My button</Button>
-
-      <Box
-        sx={{
-          display: (theme) => {
-            console.log(theme)
-            return "block"
-          },
-        }}
-      ></Box>
-
-      <div className={styles.sstyle}>This is somethign else</div>
-
-      <Div background="cerulean5" color="white" paddingY={4}>
-        test
-      </Div>
+      <Page>
+        <Box
+          sx={{
+            display: (theme) => {
+              console.log(theme)
+              return "block"
+            },
+          }}
+        ></Box>
+        <Link href="validate-number">
+          <a>Start flow</a>
+        </Link>
+      </Page>
     </div>
   )
 }

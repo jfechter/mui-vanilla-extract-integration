@@ -115,7 +115,7 @@ const Home: NextPage = () => {
             gap={3}
             display="flex"
           >
-            <BackButton />
+            <BackButton href="/" />
             <MainCta />
           </Div>
         </Container>
