@@ -27,9 +27,18 @@ const Home: NextPage = () => {
             },
           }}
         ></Box>
-        <Link href="validate-number">
-          <a>Start flow</a>
-        </Link>
+        <Div component="ul" padding={6}>
+          <li>
+            <Link href="/validate-number">
+              <a>Validate Number</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/step1">
+              <a>Care selection</a>
+            </Link>
+          </li>
+        </Div>
       </Page>
     </div>
   )
