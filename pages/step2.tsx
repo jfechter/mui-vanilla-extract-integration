@@ -86,7 +86,7 @@ const Home: NextPage = () => {
                         marginBottom={4}
                         marginTop={2}
                       >
-                        What's your budget?
+                        Whats your budget?
                       </Text>
                     </Grid2>
                     <Grid2 xs={12} md={7}>
